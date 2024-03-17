@@ -215,10 +215,8 @@ PENJELASAN
         }
 
 1. Setelah mendapatkan input yang valid, program memeriksa apakah tahun yang diinput adalah tahun kabisat atau bukan.
-2. Tahun yang habis dibagi 4 tetapi tidak habis dibagi 100 adalah tahun kabisat.
-3. Tahun yang habis dibagi 400 adalah tahun kabisat.
-4. Menggunakan operator modulo (%) untuk memeriksa kondisi-kondisi tersebut.
-5. Jika tahun memenuhi salah satu dari kedua kondisi tersebut, program mencetak "Tahun ini adalah tahun kabisat". Jika tidak, program mencetak "Tahun ini adalah bukan tahun kabisat".
-6. 'return 0' mengembalikan nilai 0, menunjukkan bahwa tidak ada kesalahan, dan akhirnya keluar dari fungsi main().
+2. Tahun yang habis dibagi 4 tetapi tidak habis dibagi 100 adalah tahun kabisat, tahun yang habis dibagi 400 adalah tahun kabisat. Menggunakan operator modulo (%) untuk memeriksa kondisi-kondisi tersebut.
+3. Jika tahun memenuhi salah satu dari kedua kondisi tersebut, program mencetak "Tahun ini adalah tahun kabisat". Jika tidak, program mencetak "Tahun ini adalah bukan tahun kabisat".
+4. 'return 0' mengembalikan nilai 0, menunjukkan bahwa tidak ada kesalahan, dan akhirnya keluar dari fungsi main().
 
            
