@@ -1,4 +1,6 @@
 # 2308107010008_Tugas1_Pemrograman
+PROGRAM 1: KONVERSI BILANGAN
+
     #include <stdio.h>
 
     int main() {
@@ -58,7 +60,7 @@
    
      }
 
-#Program 1
+PENJELASAN
     
     #include <stdio.h>
     
@@ -141,9 +143,81 @@
      }
 
 1. Jika pilihan pengguna tidak sesuai dengan yang ada (tidak dalam rentang 1-4), program mencetak pesan "Pilihan Tidak Valid".
-2. 'return 0': Program mengembalikan nilai 0, menunjukkan bahwa tidak ada kesalahan, dan akhirnya keluar dari fungsi main().
-
-#Program 2
-
-
+2. 'return 0' mengembalikan nilai 0, menunjukkan bahwa tidak ada kesalahan, dan akhirnya keluar dari fungsi main().
    
+
+PROGRAM 2: TAHUN KABISAT
+
+            #include <stdio.h>
+            
+            int main() {
+                int tahun;
+            
+                // Meminta input dari pengguna
+                while (1) {
+                    printf("Masukkan Tahun: ");
+                    if (scanf("%d", &tahun) != 1) {
+                        while (getchar() != '\n');
+                        printf("Input harus berupa angka, silahkan coba lagi.\n");
+                    } else if (tahun < 1000 || tahun > 9999) {
+                        printf("Input harus terdiri dari 4 angka.\n");
+                    } else {
+                        break;
+                    }
+                }
+            
+                // Memeriksa apakah tahun kabisat atau bukan
+                if ((tahun % 4 == 0 && tahun % 100 != 0) || tahun %400 == 0 ) {
+                   printf("Tahun ini adalah tahun kabisat");
+                
+                } else {
+                   printf("Tahun ini adalah bukan tahun kabisat");
+                }
+                return 0;
+            }
+
+PENJELASAN
+
+            #include <stdio.h>
+            
+            int main() {
+                int tahun;
+1. Dimulai dengan meng-include file header 'stdio.h' yang diperlukan untuk menggunakan fungsi-fungsi input-output standar dalam bahasa C, kemudian fungsi 'main()' dimulai.
+2. variabel tahun digunakan untuk menyimpan tahun yang akan dimasukkan oleh pengguna.
+
+            // Meminta input dari pengguna
+            while (1) {
+                printf("Masukkan Tahun: ");
+                if (scanf("%d", &tahun) != 1) {
+                    while (getchar() != '\n');
+                    printf("Input harus berupa angka, silahkan coba lagi.\n");
+                } else if (tahun < 1000 || tahun > 9999) {
+                    printf("Input harus terdiri dari 4 angka.\n");
+                } else {
+                    break;
+                }
+            }
+   
+1. 'while (1)' adalah loop tak terbatas yang akan terus berjalan sampai ada perintah break yang menghentikannya.
+2. Program mencetak pesan "Masukkan Tahun: " menggunakan printf(), meminta pengguna untuk memasukkan tahun.
+3. Jika input tidak berupa angka (diperiksa dengan '(scanf("%d", &tahun) != 1)'), program akan membersihkan buffer input menggunakan loop 'while (getchar() != '\n')' dan menampilkan pesan kesalahan "Input harus berupa angka."
+4. Jika input adalah angka tetapi tidak terdiri dari 4 digit diperiksa dengan '(tahun < 1000 || tahun > 9999)', program akan menampilkan pesan kesalahan "Input harus terdiri dari 4 angka." Jika input valid, program keluar dari loop while.
+
+           // Memeriksa apakah tahun kabisat atau bukan
+            if ((tahun % 4 == 0 && tahun % 100 != 0) || tahun %400 == 0 ) {
+               printf("Tahun ini adalah tahun kabisat");
+            
+            } else {
+               printf("Tahun ini adalah bukan tahun kabisat");
+            }
+            return 0;
+        }
+
+1. Setelah mendapatkan input yang valid, program memeriksa apakah tahun tersebut adalah tahun kabisat atau bukan.
+2. Tahun yang habis dibagi 4 tetapi tidak habis dibagi 100 adalah tahun kabisat.
+3. Tahun yang habis dibagi 400 adalah tahun kabisat.
+4. Program menggunakan operator modulo (%) untuk memeriksa kondisi-kondisi tersebut.
+5. Jika tahun memenuhi salah satu dari kedua kondisi tersebut, program mencetak "Tahun ini adalah tahun kabisat". Jika tidak, program mencetak "Tahun ini adalah bukan tahun kabisat".
+6. 'return 0' mengembalikan nilai 0, menunjukkan bahwa tidak ada kesalahan, dan akhirnya keluar dari fungsi main().
+
+           
